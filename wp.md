@@ -25,7 +25,7 @@ python3 manage.py makemigrations your_app_name
 
 
 
-
+```
 
 restaurant/
 │
@@ -78,3 +78,4 @@ restaurant/
 │
 ├── manage.py
 └── db.sqlite3
+```
