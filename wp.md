@@ -16,6 +16,19 @@
 13. urls for Reservations
 14. templates: menu.html, view_reservations.html, reserve_table.html
 
+
+- Setup einer Programmiersprache/Framework der Wahl für die Implementierung der API (Django)
+- Anbindung der Datenbank/Speicher auf dem Server/in der Infrastruktur (Sqlite)
+15. Install Django REST Framework
+16. Update settings
+17. seriallizers
+18. Views
+19. URLs 
+
+
+
+
+
 python3 manage.py makemigrations
 python3 manage.py migrate
 

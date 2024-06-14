@@ -22,11 +22,11 @@ class ArticleCreateView(CreateView):
     queryset = Article.objects.all() # <blog>/<modelname>_list.html
     #success_url = '/'
 
-    def form_valid(self, form):
+    def form_valid(this, form):
         print(form.cleaned_data)
         return super().form_valid(form)
 
-    def get_success_url(self):
+    def get_success_url(this):
         return '/blog'
 
 class ArticleListView(ListView):
@@ -38,8 +38,8 @@ class ArticleDetailView(DetailView):
     template_name = 'articles/article_detail.html'
     queryset = Article.objects.all()
 
-    def get_object(self):
-        id_ = self.kwargs.get("id")
+    def get_object(this):
+        id_ = this.kwargs.get("id")
         return get_object_or_404(Article, id=id_)
 
 
@@ -47,11 +47,11 @@ class ArticleUpdateView(UpdateView):
     template_name = 'articles/article_create.html'
     form_class = ArticleModelForm
 
-    def get_object(self):
-        id_ = self.kwargs.get("id")
+    def get_object(this):
+        id_ = this.kwargs.get("id")
         return get_object_or_404(Article, id=id_)
 
-    def form_valid(self, form):
+    def form_valid(this, form):
         print(form.cleaned_data)
         return super().form_valid(form)
 
@@ -59,9 +59,9 @@ class ArticleUpdateView(UpdateView):
 class ArticleDeleteView(DeleteView):
     template_name = 'articles/article_delete.html'
     
-    def get_object(self):
-        id_ = self.kwargs.get("id")
+    def get_object(this):
+        id_ = this.kwargs.get("id")
         return get_object_or_404(Article, id=id_)
 
-    def get_success_url(self):
+    def get_success_url(this):
         return reverse('articles:article-list')
