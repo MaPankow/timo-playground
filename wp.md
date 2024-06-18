@@ -18,7 +18,7 @@
 
 
 - Setup einer Programmiersprache/Framework der Wahl für die Implementierung der API (Django)
-- Anbindung der Datenbank/Speicher auf dem Server/in der Infrastruktur (Sqlite)
+- Anbindung der Datenbank/Speicher auf dem Server in der Infrastruktur (Sqlite)
 15. Install Django REST Framework
 16. Update settings
 17. seriallizers
